@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baratocar — Mais Informações</title>
+<meta property="og:title" content="Baratocar Repasses — Mais Informações">
+<meta property="og:description" content="Compra, venda, troca e financiamento de veículos. Atendimento especializado em Pouso Alegre, MG.">
+<meta property="og:image" content="https://via.placeholder.com/600x315/D72B2B/FFFFFF?text=BARATOCAR">
+<meta name="theme-color" content="#D72B2B">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --red:#D72B2B;
+  --red-dark:#A81F1F;
+  --black:#080808;
+  --dark:#111;
+  --dark2:#181818;
+  --border:#242424;
+  --text:#F0F0F0;
+  --muted:#666;
+  --green:#25D366;
+}
+html,body{
+  min-height:100%;
+  background:var(--black);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+}
+body{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:0 0 40px;
+}
+
+/* ── HERO ── */
+.hero{
+  width:100%;
+  background:linear-gradient(180deg,#1a0505 0%,var(--black) 100%);
+  padding:40px 20px 32px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  top:-60px;left:50%;
+  transform:translateX(-50%);
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(215,43,43,.18) 0%,transparent 70%);
+  pointer-events:none;
+}
+.live-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(37,211,102,.12);
+  border:1px solid rgba(37,211,102,.25);
+  border-radius:20px;padding:5px 14px;
+  font-size:.68rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:#4CAF50;margin-bottom:18px;
+}
+.live-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#4CAF50;
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.4)}}
+
+.logo{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:3rem;font-weight:900;
+  letter-spacing:.04em;line-height:1;
+  margin-bottom:6px;
+}
+.logo span{color:var(--red)}
+.logo-sub{
+  font-size:.75rem;color:var(--muted);
+  letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.avatar-wrap{
+  width:80px;height:80px;
+  border-radius:50%;
+  background:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.2rem;
+  margin-bottom:16px;
+  box-shadow:0 0 0 3px var(--black),0 0 0 6px rgba(215,43,43,.3);
+  animation:glow 3s infinite;
+}
+@keyframes glow{
+  0%,100%{box-shadow:0 0 0 3px var(--black),0 0 0 6px rgba(215,43,43,.3)}
+  50%{box-shadow:0 0 0 3px var(--black),0 0 0 10px rgba(215,43,43,.5)}
+}
+
+.hero-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.5rem;font-weight:900;
+  letter-spacing:.02em;margin-bottom:6px;
+}
+.hero-sub{
+  font-size:.82rem;color:var(--muted);
+  max-width:300px;line-height:1.5;
+}
+
+.stats{
+  display:flex;gap:24px;margin-top:20px;
+}
+.stat{text-align:center}
+.stat-n{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.5rem;font-weight:900;color:var(--red);
+}
+.stat-l{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+/* ── LINKS ── */
+.links{
+  width:100%;max-width:440px;
+  padding:24px 16px 0;
+  display:flex;flex-direction:column;gap:11px;
+}
+
+.link-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:15px 18px;
+  border-radius:14px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+  border:1px solid transparent;
+  position:relative;
+  overflow:hidden;
+}
+.link-btn:active{transform:scale(.97)!important}
+
+/* Primário — vermelho */
+.lb-primary{
+  background:var(--red);
+  box-shadow:0 4px 20px rgba(215,43,43,.4);
+}
+.lb-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(215,43,43,.55)}
+
+/* Verde WhatsApp */
+.lb-green{
+  background:linear-gradient(135deg,#0d1f0d,#0f250f);
+  border-color:rgba(37,211,102,.25);
+  box-shadow:0 4px 16px rgba(37,211,102,.15);
+}
+.lb-green:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.25)}
+
+/* Dark */
+.lb-dark{
+  background:var(--dark2);
+  border-color:var(--border);
+}
+.lb-dark:hover{transform:translateY(-2px);border-color:#444;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+
+/* Outline */
+.lb-outline{
+  background:transparent;
+  border-color:var(--border);
+}
+.lb-outline:hover{border-color:var(--red);transform:translateY(-1px)}
+
+.lb-icon{
+  font-size:1.6rem;flex-shrink:0;
+  width:40px;text-align:center;
+}
+.lb-text{flex:1}
+.lb-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.1rem;font-weight:900;
+  letter-spacing:.02em;color:#fff;
+}
+.lb-sub{
+  font-size:.68rem;color:rgba(255,255,255,.55);
+  margin-top:2px;
+}
+.lb-arrow{
+  font-size:.9rem;
+  color:rgba(255,255,255,.35);
+  flex-shrink:0;
+}
+
+/* Badge NOVO */
+.new-badge{
+  position:absolute;top:10px;right:12px;
+  background:rgba(215,43,43,.9);
+  color:#fff;font-size:.58rem;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:2px 7px;border-radius:10px;
+}
+.lb-primary .new-badge{background:rgba(255,255,255,.25)}
+
+/* Divisor */
+.divider{
+  width:100%;max-width:440px;
+  padding:0 16px;
+  margin:8px 0 4px;
+}
+.divider-line{
+  display:flex;align-items:center;gap:10px;
+}
+.divider-line::before,.divider-line::after{
+  content:'';flex:1;height:1px;background:var(--border);
+}
+.divider-text{
+  font-size:.62rem;color:var(--muted);
+  font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  white-space:nowrap;
+}
+
+/* Footer */
+.footer{
+  width:100%;max-width:440px;
+  padding:24px 16px 0;
+  text-align:center;
+}
+.footer-text{font-size:.72rem;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.footer-brand{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1rem;font-weight:900;letter-spacing:.05em;color:#333;
+}
+.footer-brand span{color:var(--red)}
+
+/* Pulse ring no botão principal */
+@keyframes ring{
+  0%{box-shadow:0 0 0 0 rgba(215,43,43,.5)}
+  70%{box-shadow:0 0 0 14px rgba(215,43,43,0)}
+  100%{box-shadow:0 0 0 0 rgba(215,43,43,0)}
+}
+.ring-anim{animation:ring 2s infinite}
+
+/* ── CONTADOR ── */
+.counter-wrap{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:12px;padding:12px 16px;
+  display:flex;align-items:center;gap:10px;
+  width:100%;max-width:440px;
+  margin:0 16px;
+}
+.counter-icon{font-size:1.3rem}
+.counter-text{flex:1;font-size:.78rem;line-height:1.4}
+.counter-text b{color:var(--red)}
+.counter-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.4rem;font-weight:900;color:var(--red);
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="live-badge"><div class="live-dot"></div>Atendimento Online Agora</div>
+  <div class="avatar-wrap">🚗</div>
+  <div class="logo">BARATO<span>CAR</span></div>
+  <div class="logo-sub">Repasses • Pouso Alegre, MG</div>
+  <div class="hero-title">Como podemos te ajudar?</div>
+  <div class="hero-sub">Compra, venda, troca e financiamento com atendimento especializado</div>
+  <div class="stats">
+    <div class="stat"><div class="stat-n">+200</div><div class="stat-l">Vendas</div></div>
+    <div class="stat"><div class="stat-n">5★</div><div class="stat-l">Avaliação</div></div>
+    <div class="stat"><div class="stat-n">24h</div><div class="stat-l">Resposta</div></div>
+  </div>
+</div>
+
+<!-- CONTADOR DE ATENDIMENTOS -->
+<div style="width:100%;max-width:440px;padding:16px 16px 0">
+  <div class="counter-wrap">
+    <div class="counter-icon">👥</div>
+    <div class="counter-text">
+      <b id="counter">47</b> pessoas foram atendidas hoje
+    </div>
+    <div class="counter-num" id="online">3</div>
+  </div>
+</div>
+
+<!-- LINKS -->
+<div class="links">
+
+  <!-- ATENDIMENTO IA — PRINCIPAL -->
+  <a class="link-btn lb-primary ring-anim"
+     href="https://clebersetin-afk.github.io/Baratocar-Plataforma-Automotiva/atendimento.html"
+     target="_blank">
+    <div class="lb-icon">🤖</div>
+    <div class="lb-text">
+      <div class="lb-label">Atendimento Automático</div>
+      <div class="lb-sub">Resposta imediata • Disponível 24h</div>
+    </div>
+    <div class="lb-arrow">›</div>
+    <div class="new-badge">NOVO</div>
+  </a>
+
+  <!-- WHATSAPP DIRETO -->
+  <a class="link-btn lb-green"
+     href="https://wa.me/5535999043232?text=Olá!%20Vi%20o%20anúncio%20e%20gostaria%20de%20mais%20informações%20sobre%20veículos%20🚗"
+     target="_blank">
+    <div class="lb-icon">💬</div>
+    <div class="lb-text">
+      <div class="lb-label">Falar com Consultor</div>
+      <div class="lb-sub">(35) 99904-3232 • WhatsApp</div>
+    </div>
+    <div class="lb-arrow">›</div>
+  </a>
+
+  <!-- CATÁLOGO -->
+  <a class="link-btn lb-dark"
+     href="https://wa.me/c/553597538122"
+     target="_blank">
+    <div class="lb-icon">🛒</div>
+    <div class="lb-text">
+      <div class="lb-label">Ver Catálogo Completo</div>
+      <div class="lb-sub">Todos os veículos com fotos e preços</div>
+    </div>
+    <div class="lb-arrow">›</div>
+  </a>
+
+  <div class="divider">
+    <div class="divider-line">
+      <span class="divider-text">O que você precisa?</span>
+    </div>
+  </div>
+
+  <!-- COMPRAR -->
+  <a class="link-btn lb-dark"
+     href="https://clebersetin-afk.github.io/Baratocar-Plataforma-Automotiva/atendimento.html"
+     target="_blank">
+    <div class="lb-icon">🚗</div>
+    <div class="lb-text">
+      <div class="lb-label">Quero Comprar um Veículo</div>
+      <div class="lb-sub">Encontre o carro ideal para você</div>
+    </div>
+    <div class="lb-arrow">›</div>
+  </a>
+
+  <!-- VENDER -->
+  <a class="link-btn lb-dark"
+     href="https://clebersetin-afk.github.io/Baratocar-Plataforma-Automotiva/atendimento.html"
+     target="_blank">
+    <div class="lb-icon">💰</div>
+    <div class="lb-text">
+      <div class="lb-label">Quero Vender meu Veículo</div>
+      <div class="lb-sub">Avaliação rápida e proposta justa</div>
+    </div>
+    <div class="lb-arrow">›</div>
+  </a>
+
+  <!-- TROCAR -->
+  <a class="link-btn lb-dark"
+     href="https://clebersetin-afk.github.io/Baratocar-Plataforma-Automotiva/atendimento.html"
+     target="_blank">
+    <div class="lb-icon">🔄</div>
+    <div class="lb-text">
+      <div class="lb-label">Quero Trocar meu Veículo</div>
+      <div class="lb-sub">Melhores condições de troca</div>
+    </div>
+    <div class="lb-arrow">›</div>
+  </a>
+
+  <!-- FINANCIAR -->
+  <a class="link-btn lb-dark"
+     href="https://clebersetin-afk.github.io/Baratocar-Plataforma-Automotiva/atendimento.html"
+     target="_blank">
+    <div class="lb-icon">💳</div>
+    <div class="lb-text">
+      <div class="lb-label">Quero Financiar um Veículo</div>
+      <div class="lb-sub">Parcelas que cabem no seu bolso</div>
+    </div>
+    <div class="lb-arrow">›</div>
+  </a>
+
+  <div class="divider">
+    <div class="divider-line">
+      <span class="divider-text">Avaliações</span>
+    </div>
+  </div>
+
+  <!-- DEPOIMENTOS RÁPIDOS -->
+  <div style="background:var(--dark2);border:1px solid var(--border);border-radius:14px;padding:14px 16px">
+    <div id="testimonial" style="font-size:.82rem;line-height:1.6;color:var(--text);min-height:60px;transition:opacity .3s"></div>
+    <div style="display:flex;align-items:center;gap:8px;margin-top:10px">
+      <div id="t-name" style="font-size:.7rem;font-weight:700;color:var(--muted)"></div>
+      <div style="margin-left:auto;font-size:.85rem">⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-text">
+    Na Baratocar, nosso compromisso é transformar a compra,<br>
+    venda ou troca do seu veículo em uma experiência<br>
+    <strong>simples, segura e transparente.</strong>
+  </div>
+  <div class="footer-brand">BARATO<span>CAR</span> REPASSES</div>
+  <div style="font-size:.62rem;color:#333;margin-top:6px">Pouso Alegre, MG • (35) 99904-3232</div>
+</div>
+
+<script>
+/* ── CONTADOR DINÂMICO ── */
+let count = 47;
+setInterval(()=>{
+  if(Math.random()>.7){
+    count++;
+    document.getElementById('counter').textContent=count;
+  }
+}, 8000);
+
+/* ── ONLINE SIMULADO ── */
+const onlines=[2,3,3,4,3,2,3,4,2,3];
+let oi=0;
+setInterval(()=>{
+  oi=(oi+1)%onlines.length;
+  document.getElementById('online').textContent=onlines[oi];
+},12000);
+
+/* ── DEPOIMENTOS ROTATIVOS ── */
+const testimonials=[
+  {text:'"Fui muito bem atendido! Encontrei o carro que procurava em menos de 24h. Atendimento rápido e transparente."',name:'João F. — Honda Civic 2022'},
+  {text:'"Vendi meu carro pelo valor justo sem burocracia. O processo foi rápido e seguro. Super recomendo!"',name:'Mariana S. — Toyota Corolla'},
+  {text:'"Financiamento aprovado rapidinho e com parcela que coube no meu bolso. Excelente atendimento!"',name:'Carlos R. — VW T-Cross'},
+  {text:'"Troquei meu veículo e saí muito satisfeita. Consultor muito atencioso e honesto em tudo."',name:'Ana B. — Jeep Compass'},
+  {text:'"Vim pelo Instagram, fui atendido na hora pelo WhatsApp e fechei negócio no mesmo dia!"',name:'Pedro M. — Hyundai Creta'},
+];
+let ti=0;
+function showT(){
+  const el=document.getElementById('testimonial');
+  const nm=document.getElementById('t-name');
+  el.style.opacity=0;
+  setTimeout(()=>{
+    el.textContent=testimonials[ti].text;
+    nm.textContent=testimonials[ti].name;
+    el.style.opacity=1;
+    ti=(ti+1)%testimonials.length;
+  },300);
+}
+showT();
+setInterval(showT,5000);
+
+/* ── UTM TRACKING ── */
+const urlParams=new URLSearchParams(window.location.search);
+const utm_source=urlParams.get('utm_source')||'direto';
+const utm_medium=urlParams.get('utm_medium')||'link';
+
+// Adiciona UTM nos links para rastreamento
+document.querySelectorAll('a[href*="atendimento"]').forEach(a=>{
+  const base=a.href.split('?')[0];
+  a.href=`${base}?utm_source=${utm_source}&utm_medium=${utm_medium}&t=${Date.now()}`;
+});
+</script>
+</body>
+</html>
